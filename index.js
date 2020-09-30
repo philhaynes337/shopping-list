@@ -1,11 +1,14 @@
-$(function () {
+/* function for enterting items */
 
+$(function() {
 	$('#js-shopping-list-form').submit(event => {
 
 
-		event.preventDefault();
+		const addItem = $('.js-shopping-list-entry').val();
+
+			$('#shopping-list-entry').val('');
 
 	})
+}
 
-
-})
+	)
