@@ -1,7 +1,7 @@
 /* function for enterting items */
 
-$(function() {
-	$('#js-shopping-list-form').submit(event => {
+$(function(){
+	$('#js-shopping-list-form').submit(function(event) {
 
 
 		const addItem = $('.shopping-list-entry').val();
@@ -23,5 +23,5 @@ $(function() {
 
 	})
 }
-
-	)
+)
+	
