@@ -1,14 +1,14 @@
 /* function for enterting items */
 
 $(function(){
-	$('#js-shopping-list-form').submit(function(event) {
+  $('#js-shopping-list-form').submit(function(event) {
+    event.preventDefault();
+    const listItem = $('.js-shopping-list-entry').val();
+
+    $('#shopping-list-entry').val('');
 
 
-		const addItem = $('.shopping-list-entry').val();
-
-			$('#shopping-list-entry').val('');
-
-			    $('.shopping-list').append(
+    $('.shopping-list').append(
       `<li>
         <span class="shopping-item">${listItem}</span>
         <div class="shopping-item-controls">
@@ -20,8 +20,4 @@ $(function(){
           </button>
         </div>
       </li>`);
-
-	})
-}
-)
-	
+  });
