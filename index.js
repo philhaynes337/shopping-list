@@ -1,5 +1,3 @@
-/* function for enterting items */
-
 $(function(){
   $('#js-shopping-list-form').submit(function(event) {
     event.preventDefault();
@@ -21,3 +19,13 @@ $(function(){
         </div>
       </li>`);
   });
+
+  $('.shopping-list').on('click', '.shopping-item-delete', function(event) {
+    $(this).closest('li').remove();
+  });
+
+  $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
+    $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
+  });
+
+});
